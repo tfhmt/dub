@@ -125,6 +125,12 @@ importers:
       '@team-plain/typescript-sdk':
         specifier: ^5.9.0
         version: 5.9.0
+      '@tidbcloud/prisma-adapter':
+        specifier: 6.17.0
+        version: 6.17.0(@tidbcloud/serverless@0.3.0)
+      '@tidbcloud/serverless':
+        specifier: 0.3.0
+        version: 0.3.0
       '@tiptap/extension-image':
         specifier: ^3.15.3
         version: 3.15.3(@tiptap/core@3.15.3(@tiptap/pm@3.15.3))
@@ -3457,8 +3463,14 @@ packages:
   '@prisma/config@6.19.1':
     resolution: {integrity: sha512-bUL/aYkGXLwxVGhJmQMtslLT7KPEfUqmRa919fKI4wQFX4bIFUKiY8Jmio/2waAjjPYrtuDHa7EsNCnJTXxiOw==}
 
+  '@prisma/debug@6.17.0':
+    resolution: {integrity: sha512-eE2CB32nr1hRqyLVnOAVY6c//iSJ/PN+Yfoa/2sEzLGpORaCg61d+nvdAkYSh+6Y2B8L4BVyzkRMANLD6nnC2g==}
+
   '@prisma/debug@6.19.1':
     resolution: {integrity: sha512-h1JImhlAd/s5nhY/e9qkAzausWldbeT+e4nZF7A4zjDYBF4BZmKDt4y0jK7EZapqOm1kW7V0e9agV/iFDy3fWw==}
+
+  '@prisma/driver-adapter-utils@6.17.0':
+    resolution: {integrity: sha512-JqK4STDoZVQnj7ac6+daN5w6l0Vns82tHdj8FVzMdCLMdWd2JgDzDS688gTMZt7rEDNJSb/z9U5XtIP0C08sWg==}
 
   '@prisma/driver-adapter-utils@6.19.1':
     resolution: {integrity: sha512-W6Ds1lOZ2H6VGikchhOYs9dfKgPymfS/FJjtgYRqNTxJyHRyHsfTzGG+MOAupeLhZFHPWPA8eX12gNbgAGT8/g==}
@@ -5465,6 +5477,15 @@ packages:
     peerDependencies:
       '@testing-library/dom': '>=7.21.4'
 
+  '@tidbcloud/prisma-adapter@6.17.0':
+    resolution: {integrity: sha512-ULKaE2e4+j5ijgkvRMN2rz7Ub35Ufh5Z4qkBhGk6BhLb3A1NnnN/+RPITDwYS0Te4bHYYhGwdRSek00jK9g1WQ==}
+    peerDependencies:
+      '@tidbcloud/serverless': '>= 0.1.0'
+
+  '@tidbcloud/serverless@0.3.0':
+    resolution: {integrity: sha512-SrTqKNPuskV8GTm574d9otox8GAKXrsoF5NfQ5fiDirR+ao+eE6O2pfWr5zLhmFLQRbeuT8SKaUD+JOK0Z7gyQ==}
+    engines: {node: '>=16'}
+
   '@tiptap/core@3.15.3':
     resolution: {integrity: sha512-bmXydIHfm2rEtGju39FiQNfzkFx9CDvJe+xem1dgEZ2P6Dj7nQX9LnA1ZscW7TuzbBRkL5p3dwuBIi3f62A66A==}
     peerDependencies:
@@ -6083,11 +6104,12 @@ packages:
 
   '@vercel/edge-config-fs@0.1.0':
     resolution: {integrity: sha512-NRIBwfcS0bUoUbRWlNGetqjvLSwgYH/BqKqDN7vK1g32p7dN96k0712COgaz6VFizAm9b0g6IG6hR6+hc0KCPg==}
+    deprecated: This package has been renamed to @vercel/global-config-fs. Install @vercel/global-config-fs instead.
 
   '@vercel/edge-config@0.4.1':
     resolution: {integrity: sha512-4Mc3H7lE+x4RrL17nY8CWeEorvJHbkNbQTy9p8H1tO7y11WeKj5xeZSr07wNgfWInKXDUwj5FZ3qd/jIzjPxug==}
     engines: {node: '>=14.6'}
-    deprecated: This version is no longer supported. Please upgrade to the latest version.
+    deprecated: This package has been renamed to @vercel/global-config. Install @vercel/global-config instead.
 
   '@vercel/functions@3.4.3':
     resolution: {integrity: sha512-kA14KIUVgAY6VXbhZ5jjY+s0883cV3cZqIU3WhrSRxuJ9KvxatMjtmzl0K23HK59oOUjYl7HaE/eYMmhmqpZzw==}
@@ -6260,10 +6282,12 @@ packages:
   '@xmldom/xmldom@0.8.10':
     resolution: {integrity: sha512-2WALfTl4xo2SkGCYRt6rDTFfk9R1czmBvUQy12gK2KuRKIpWEhcbbzy8EZXtz/jkRqHX8bFEc6FC1HjX4TUWYw==}
     engines: {node: '>=10.0.0'}
+    deprecated: this version has critical issues, please update to the latest version
 
   '@xmldom/xmldom@0.9.8':
     resolution: {integrity: sha512-p96FSY54r+WJ50FIOsCOjyj/wavs8921hG5+kVMmZgKcvIKxMXHTrjNJvRgWa/zuX3B6t2lijLNFaOyuxUH+2A==}
     engines: {node: '>=14.6'}
+    deprecated: this version has critical issues, please update to the latest version
 
   abab@2.0.6:
     resolution: {integrity: sha512-j2afSsaIENvHZN2B8GOpF566vZ5WVk5opAiMTvWgaQT8DkbOqsTfvNAvHoRGU2zzP8cPoqys+xHTRDWW8L+/BA==}
@@ -13166,7 +13190,7 @@ packages:
 
   uuid@3.4.0:
     resolution: {integrity: sha512-HjSDRw6gZE5JMggctHBcjVak08+KEVhSIiDzFnT9S9aegmp85S/bReBVTb4QTFaRNptJ9kuYaNhnbNEOkbKb/A==}
-    deprecated: Please upgrade  to version 7 or higher.  Older versions may use Math.random() in certain circumstances, which is known to be problematic.  See https://v8.dev/blog/math-random for details.
+    deprecated: uuid@10 and below is no longer supported.  For ESM codebases, update to uuid@latest.  For CommonJS codebases, use uuid@11 (but be aware this version will likely be deprecated in 2028).
     hasBin: true
 
   uuid@8.3.2:
@@ -16638,7 +16662,13 @@ snapshots:
     transitivePeerDependencies:
       - magicast
 
+  '@prisma/debug@6.17.0': {}
+
   '@prisma/debug@6.19.1': {}
+
+  '@prisma/driver-adapter-utils@6.17.0':
+    dependencies:
+      '@prisma/debug': 6.17.0
 
   '@prisma/driver-adapter-utils@6.19.1':
     dependencies:
@@ -19194,6 +19224,13 @@ snapshots:
     dependencies:
       '@testing-library/dom': 10.4.0
     optional: true
+
+  '@tidbcloud/prisma-adapter@6.17.0(@tidbcloud/serverless@0.3.0)':
+    dependencies:
+      '@prisma/driver-adapter-utils': 6.17.0
+      '@tidbcloud/serverless': 0.3.0
+
+  '@tidbcloud/serverless@0.3.0': {}
 
   '@tiptap/core@3.15.3(@tiptap/pm@3.15.3)':
     dependencies:
