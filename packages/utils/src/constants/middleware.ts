@@ -1,15 +1,15 @@
 export const DEFAULT_REDIRECTS = {
   home: "https://dub.co",
   dub: "https://dub.co",
-  signin: "https://app.dub.co/login",
-  login: "https://app.dub.co/login",
-  register: "https://app.dub.co/register",
-  signup: "https://app.dub.co/register",
-  app: "https://app.dub.co",
-  dashboard: "https://app.dub.co",
-  links: "https://app.dub.co/links",
-  settings: "https://app.dub.co/settings",
-  welcome: "https://app.dub.co/onboarding/welcome",
+  signin: "https://app.nexaw.in/login",
+  login: "https://app.nexaw.in/login",
+  register: "https://app.nexaw.in/register",
+  signup: "https://app.nexaw.in/register",
+  app: "https://app.nexaw.in",
+  dashboard: "https://app.nexaw.in",
+  links: "https://app.nexaw.in/links",
+  settings: "https://app.nexaw.in/settings",
+  welcome: "https://app.nexaw.in/onboarding/welcome",
   discord: "https://twitter.com/dubdotco", // placeholder for now
 };
 

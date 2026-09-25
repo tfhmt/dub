@@ -15,7 +15,7 @@ export default function AuthMarketingLayout({
       <DubAnalytics
         apiHost="/_proxy/dub"
         cookieOptions={{
-          domain: process.env.VERCEL === "1" ? ".dub.co" : "localhost",
+          domain: process.env.VERCEL === "1" ? ".nexaw.in" : "localhost",
         }}
         domainsConfig={{
           refer: "refer.dub.co",

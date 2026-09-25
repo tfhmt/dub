@@ -44,14 +44,14 @@ export const PARTNERS_DOMAIN_WITH_NGROK =
 
 export const APP_DOMAIN =
   process.env.NEXT_PUBLIC_VERCEL_ENV === "production"
-    ? "https://app.dub.co"
+    ? "https://app.nexaw.in"
     : process.env.NEXT_PUBLIC_VERCEL_ENV === "preview"
       ? `https://${process.env.NEXT_PUBLIC_VERCEL_URL || "preview.dub.co"}`
       : "http://localhost:8888";
 
 export const APP_DOMAIN_WITH_NGROK =
   process.env.NEXT_PUBLIC_VERCEL_ENV === "production"
-    ? "https://app.dub.co"
+    ? "https://app.nexaw.in"
     : process.env.NEXT_PUBLIC_VERCEL_ENV === "preview"
       ? `https://${process.env.NEXT_PUBLIC_VERCEL_URL || "preview.dub.co"}`
       : process.env.NEXT_PUBLIC_NGROK_URL || "http://localhost:8888";
@@ -59,9 +59,9 @@ export const APP_DOMAIN_WITH_NGROK =
 export const isAppHostname = (hostname: string) => {
   if (process.env.NEXT_PUBLIC_VERCEL_ENV === "preview") {
     // pattern of our preview URLs are always "dub-<random-string>.dub.co"
-    return hostname.startsWith("dub-") && hostname.endsWith(".dub.co");
+    return hostname.startsWith("dub-") && hostname.endsWith(".nexaw.in");
   }
-  return new Set(["app.dub.co", "localhost:8888", "localhost"]).has(hostname);
+  return new Set(["app.nexaw.in", "localhost:8888", "localhost"]).has(hostname);
 };
 
 export const DUB_LOGO = "https://assets.dub.co/logo.png";
