@@ -394,7 +394,7 @@ export const authOptions: NextAuthOptions = {
   },
   callbacks: {
     signIn: async ({ user, account, profile }) => {
-      if (!user.email || (await isBlacklistedEmail(user.email))) {
+      if (!user.email || !user.email.toLowerCase().endsWith("@techfinityhub.net") || (await isBlacklistedEmail(user.email))) {
         return false;
       }
 
