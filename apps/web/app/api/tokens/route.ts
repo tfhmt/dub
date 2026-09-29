@@ -156,7 +156,7 @@ export const POST = withWorkspace(
         });
       },
       {
-        isolationLevel: Prisma.TransactionIsolationLevel.ReadUncommitted,
+        isolationLevel: Prisma.TransactionIsolationLevel.ReadCommitted,
         maxWait: 5000,
         timeout: 5000,
       },

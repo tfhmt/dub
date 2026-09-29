@@ -253,7 +253,7 @@ export const POST = withWorkspace(
         });
       },
       {
-        isolationLevel: Prisma.TransactionIsolationLevel.Serializable,
+        isolationLevel: Prisma.TransactionIsolationLevel.RepeatableRead,
         maxWait: 5000,
         timeout: 5000,
       },
