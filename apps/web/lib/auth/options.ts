@@ -436,7 +436,7 @@ export const authOptions: NextAuthOptions = {
           // if the existing user doesn't have an image or the image is not stored in R2
           if (
             (!userExists.image || !isStored(userExists.image)) &&
-            profilePic
+            profilePic && process.env.STORAGE_ENDPOINT
           ) {
             const { url } = await storage.upload({
               key: `avatars/${userExists.id}`,
@@ -624,7 +624,7 @@ export const authOptions: NextAuthOptions = {
 
       // lazily backup user avatar to R2
       const currentImage = message.user.image;
-      if (currentImage && !isStored(currentImage)) {
+      if (currentImage && !isStored(currentImage) && process.env.STORAGE_ENDPOINT) {
         waitUntil(
           (async () => {
             const { url } = await storage.upload({
