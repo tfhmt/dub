@@ -1,3 +1,5 @@
+"use client";
+
 import { Button } from "@dub/ui";
 import { Google } from "@dub/ui/icons";
 import { signIn } from "next-auth/react";
